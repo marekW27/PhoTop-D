@@ -1,0 +1,14 @@
+ .footer
+ {
+    color: white;
+    clear: both;
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    width: 100%;
+    
+ }
+ .footerInfo
+ {
+     text-align: center;
+ }
