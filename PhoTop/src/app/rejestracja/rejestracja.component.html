@@ -1,3 +1,5 @@
+<app-nav></app-nav>
+
 <div class="container">
 
   <div class="rejestruj">
@@ -8,29 +10,30 @@
 
 
       <!--<div id="panel">-->
-      <form>
 
+      <form (ngSubmit)="signup(formData)" #formData="ngForm">
         <div class="form-group">
-          <label class="napis" for="username">Twoj pseudonim:</label>
-          <input class="pole" type="text" id="username" name="username">
+          <label class="napis">Twoj pseudonim:</label>
+          <input ngModel class="pole" type="pseudonim" name="pseudonim">
         </div>
 
         <div class="form-group">
-          <label class="napis" for="username">E-mail:</label>
-          <input class="pole" type="text" id="username" name="username">
+          <label class="napis">E-mail:</label>
+          <input ngModel class="pole" type="emial" name="email">
         </div>
 
 
         <div class="form-group">
           <label class="napis" for="password">Hasło:</label>
-          <input class="pole" type="password" id="password" name="password">
+          <input ngModel class="pole" type="password" id="password" name="password">
         </div>
-
 
         <div class="form-group">
-          <label class="napis" for="password"> Powtorz hasło:</label>
-          <input class="pole" type="password" id="password" name="password">
+          <label class="napis" for="password">Powtorz hasło:</label>
+          <input ngModel class="pole" type="password1" id="password1" name="password1">
         </div>
+
+
 
         <div id="lower">
           <label class="check" for="checkbox">Zapoznalem sie i akceptujeng regulamin serwisu PhoTop </label>

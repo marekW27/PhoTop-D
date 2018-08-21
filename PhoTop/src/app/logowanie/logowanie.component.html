@@ -1,3 +1,6 @@
+<app-nav>
+</app-nav>
+
 <div class="container">
     <div class="loguj">
         <h1> Zaloguj</h1>
@@ -16,17 +19,20 @@
         <div class="col-lg-6">
             <h4>Zaloguj uzywajac konta PhoTop</h4>
 
-            <div id="panel">
-                <form>
-                    <label for="username">Nazwa użytkownika:</label>
-                    <input type="text" id="username" name="username">
-                    <label for="password">Hasło:</label>
 
-                    <input type="password" id="password" name="password">
+            <div id="panel">
+                <form (ngSubmit)="login(formData)" #formData="ngForm">
+
+                    <label for="email">E-mail:</label>
+                    <input ngModel type="email" id="email" name="email" required>
+
+                    <label for="password">Hasło:</label>
+                    <input ngModel type="password" id="password" name="password" required>
+
                     <div id="lower">
                         <input type="checkbox">
                         <label class="check" for="checkbox">Zapamiętaj mnie! </label>
-                        <input class="btn btn-dark" type="submit" value="Login">
+                        <input class="btn btn-dark" type="submit" [disabled]="formData.invalid" value="Login">
                         <p>
                             <a id="zmiana" routerLink="/zmiana-h">Zapomniałeś hasła?</a>
                         </p>

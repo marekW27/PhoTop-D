@@ -16,6 +16,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppRoutingModule } from './app.routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AuthService } from './auth.service';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpService } from './http.service';
+import { GlownaComponent } from './glowna/glowna.component';
 
 
 
@@ -28,16 +32,18 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     RejestracjaComponent,
     EdycjaComponent,
     ZmianaHComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    GlownaComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   exports: [
   ],
-  providers: [],
+  providers: [AuthService, HttpService],
   bootstrap: [AppComponent]
 })
 

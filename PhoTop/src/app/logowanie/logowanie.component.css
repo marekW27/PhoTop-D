@@ -33,7 +33,7 @@
         text-shadow: 0 0 1px white;
         }
 
-        #username, #password {
+        #email, #password {
             display: block;
             width: 360px; 
             margin: 0 auto;
@@ -42,7 +42,7 @@
             outline: 5px solid #ebebeb;
             font-size: 22px;
             }
-            #username:focus, #password:focus {
+            #email:focus, #password:focus {
             outline: 5px solid #e5f2f8;
             }
             #lower {
